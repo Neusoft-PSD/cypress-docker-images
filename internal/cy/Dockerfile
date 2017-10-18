@@ -16,8 +16,9 @@ WORKDIR /home/person
 # only report NPM install warnings and errors
 ENV npm_config_loglevel=warn
 
-RUN npm install -g cypress-cli
-RUN cypress install --cypress-version 1.0.2
+# RUN npm install -g cypress-cli
+# RUN cypress install --cypress-version 1.0.2
+RUN npm install -g cypress
 RUN cypress verify
 RUN cypress --version
 
